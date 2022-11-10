@@ -298,7 +298,7 @@ app.get('/categories/:categoriesId/products/:productsId', (req, res) => {
 
 ```
 
-> Query Parameters (GET:parámetros query)
+> Query Parameters (GET:parámetros query) => Filtrar
 
 Los endpoints especificos deben declararsen antes de los endpoints dinamicos. Uno de los mandamientos.
 
