@@ -1,8 +1,11 @@
 {
   "devDependencies": {
     "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "jshint": "^2.13.5",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "prettier": "^2.7.1"
   },
   "name": "backend_apirest_express",
   "description": "Create a project using an API REST with Node Js and Express Js.",
@@ -114,7 +117,9 @@
     "yocto-queue": "^0.1.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "lint": "eslint"
   },
   "repository": {
     "type": "git",

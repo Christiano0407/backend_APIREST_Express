@@ -1,5 +1,2 @@
 //** === === Backend APIREST ExpressJs === ===  */
-const hello = () => {
-  console.log('Format');
-};
-hello();
+console.log('Hello World');

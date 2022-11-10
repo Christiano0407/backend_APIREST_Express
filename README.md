@@ -60,6 +60,16 @@ npm install --save-dev nodemon
 
 [gitignore.io](https://www.toptal.com/developers/gitignore/)
 
+## Config Good Practice (Project ESlint & Prettier & Nodemon)
+
+> Config Project & Install
+
+```javascript
+
+npm i nodemon eslint eslint-config-prettier eslint-plugin-prettier prettier -D
+
+```
+
 ## MIT LICENSE
 
 MIT License
