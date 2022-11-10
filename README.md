@@ -32,11 +32,34 @@ Create a project using an API REST with Node Js and Express Js.
 
 - [ExpressJs](https://expressjs.com/es/)
 
+```javascript
+
+const express = require(`express`);
+const app = express();
+const port = process.env.port || 3000;
+//*? === Routing === */
+app.get('/', (req, res) => {
+  res.send('Hello World');
+});
+//*? === Listen Port === */
+app.listen(port, () => {
+  console.log(`Server is running in Port http://localhost:${port}...`);
+});
+
+
+```
+
 ## Apollo Server
 
 > Compatibility With Graphql and Working with Backend
 
 [Apollo_Server](https://www.apollographql.com/docs/)
+
+## GraphQL
+
+> a query language for APIs
+
+[GraphQL](https://graphql.org/)
 
 ## Nodemon
 
@@ -53,6 +76,22 @@ npm install -g nodemon
 npm install --save-dev nodemon
 
 //nodemon ./server.js  ==> (localhost 8080 / 3000)
+
+```
+
+> Run Dev (Desarrollo)
+
+```javascript
+run server
+npm run => "dev": "nodemon app.js",
+
+```
+
+> Run Production
+
+```javascript
+run server
+npm run =>  "start": "node app.js",
 
 ```
 
