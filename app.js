@@ -2,12 +2,12 @@
 
 const express = require(`express`);
 const app = express();
-const PORT = process.env.PORT || 3000;
-
+const port = process.env.port || 3000;
+//*? === Routing === */
 app.get('/', (req, res) => {
   res.send('Hello World');
 });
-
-app.listen(PORT, () => {
+//*? === Listen Port === */
+app.listen(port, () => {
   console.log(`Server is running in Port http://localhost:${PORT}...`);
 });
