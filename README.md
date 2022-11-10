@@ -216,7 +216,7 @@ Verbo ("verbos HTTP") o solicitud que indica la intención de la solicitud.
 - 404 Not Found: El mservidor no pudo encontrar el recurso solicitado.
 - 500 Internal Server Error: El servidor encontró una situación que no sabe cómo manejar.
 
-[Status](https://camo.githubusercontent.com/0294f63543e7574885567ce08f9cea150b0972e0dbfa682d5e0b07e2423b3e62/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f464452304f4d6d57514141486364573f666f726d61743d6a7067266e616d653d343039367834303936)
+![Status](https://camo.githubusercontent.com/0294f63543e7574885567ce08f9cea150b0972e0dbfa682d5e0b07e2423b3e62/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f464452304f4d6d57514141486364573f666f726d61743d6a7067266e616d653d343039367834303936)
 
 ## MIT LICENSE
 
