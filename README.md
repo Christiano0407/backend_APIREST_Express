@@ -61,6 +61,12 @@ app.listen(port, () => {
 
 [GraphQL](https://graphql.org/)
 
+## NESTJs
+
+> A progressive Node.js framework for building efficient, reliable and scalable server-side applications.
+
+[nest_js](https://nestjs.com/)
+
 ## Nodemon
 
 > NodeJs
@@ -259,6 +265,10 @@ Normalmente usamos el formato "JSON".
 > Endpoints
 
 Los endpoints son las URLs de un API o un backend que responden a una petición. Los mismos entrypoints tienen que calzar con un endpoint para existir. Algo debe responder para que se renderice un sitio con sentido para el visitante.
+
+> Query Parameters (GET:parámetros query)
+
+Los endpoints especificos deben declararsen antes de los endpoints dinamicos. Uno de los mandamientos.
 
 ## MIT LICENSE
 
