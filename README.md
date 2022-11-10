@@ -67,6 +67,10 @@ app.listen(port, () => {
 
 [nest_js](https://nestjs.com/)
 
+## Faker Js
+
+[faker_js](https://fakerjs.dev/)
+
 ## Nodemon
 
 > NodeJs
@@ -266,9 +270,47 @@ Normalmente usamos el formato "JSON".
 
 Los endpoints son las URLs de un API o un backend que responden a una petición. Los mismos entrypoints tienen que calzar con un endpoint para existir. Algo debe responder para que se renderice un sitio con sentido para el visitante.
 
+> Params (Parámetros) ==> ":" / "?" / "&"
+
+```javascript
+
+app.get('/products', (req, res) => {
+  res.json([
+    {
+      name: 'player soccer',
+      price: 1750,
+    },
+    {
+      name: 'Shoes soccer',
+      price: 3500,
+    },
+  ]);
+});
+
+app.get('/categories/:categoriesId/products/:productsId', (req, res) => {
+  const { categoriesId, productsId } = req.params;
+
+  res.json({
+    categoriesId,
+    productsId,
+  });
+});
+
+```
+
 > Query Parameters (GET:parámetros query)
 
 Los endpoints especificos deben declararsen antes de los endpoints dinamicos. Uno de los mandamientos.
+
+```javascript
+
+// api.example.com/products
+// api.example.com/products?page=1
+// api.example.com/products?limit=10&offset=0
+// api.example.com/products?region=USA
+// api.example.com/products?region=USA&brand=XYZ
+
+```
 
 ## MIT LICENSE
 
