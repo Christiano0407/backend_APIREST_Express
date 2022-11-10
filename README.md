@@ -38,9 +38,27 @@ Create a project using an API REST with Node Js and Express Js.
 
 - [nodemon](https://nodemon.io/)
 
+```javascript
+
+// => Install Global
+npm install -g nodemon
+
+// => Install Development Dependency
+npm install --save-dev nodemon
+
+//nodemon ./server.js  ==> (localhost 8080 / 3000)
+
+```
+
 ## NPM
 
 - [npm](https://www.npmjs.com/)
+
+## GitIgnore
+
+> gitignore.io
+
+[gitignore.io](https://www.toptal.com/developers/gitignore/)
 
 ## MIT LICENSE
 
