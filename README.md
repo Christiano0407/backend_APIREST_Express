@@ -115,6 +115,109 @@ npm i nodemon eslint eslint-config-prettier eslint-plugin-prettier prettier -D
 
 ```
 
+## API / APIREST / RESTful API
+
+> ¿Qué es una API?
+
+Aplication Programming Interface (Interfaz de programación de aplicaciones).
+
+[MDN_API](https://developer.mozilla.org/es/docs/Mozilla/Add-ons/WebExtensions/API)
+[Referencia_API](https://developer.mozilla.org/es/docs/Web/API)
+
+> Fetch
+
+La API Fetch proporciona una interfaz para recuperar recursos (incluso a través de la red).
+
+[MDN_Fetch](https://developer.mozilla.org/es/docs/Web/API/Fetch_API)
+
+> Web Article
+
+[APIRESTful](https://aldeahost.com.mx/todo-lo-que-necesitas-saber-sobre-el-web-service/)
+
+![APIRESTful](https://static.platzi.com/media/user_upload/Captura-d336ab2e-8e2d-40a4-808a-ee3da1fbdaef.jpg);
+
+## Model Client & Server
+
+> ( HTTP,HTTPS,APi REST)
+
+> HTTP & HTTPS ( Hypertext Transfer Protocol )
+
+Protocolo de Transferencia de Hipertexto.
+
+Modelo que usamos para acceder a Internet y obtener recursos e información.
+
+> El protocolo HTTP, define el formato de los mensajes (request).
+
+Un protocolo, es un conjunto de reglas que permiten transmitir información entre dispositivos de una red.
+
+> Client (Cliente)
+
+El Navegador desde el cual se realizan solicitudes a un servidor.
+
+> Server (Servidor)
+
+Programa que se ejecuta en un servidor físico para ofrecer un servicio al cliente. Envía información.
+
+El servidor conoce el formato esperado del mensaje que envía el cliente. Además, el cliente, conoce el formato esperado del mensaje que recibe del servidor.
+
+> Solicitud (Request) HTTP
+
+- Métodos HTTP
+- Caminos (Path)
+- Versiones HTTP
+- Cabeceras (Headers)
+- Curpo (body)
+
+> Headers (Cabeceras)
+
+Proveen información adicional sobre la solicitud.
+
+> Body (Cuerpo)
+
+Contiene la información que debe ser enviada al servidor para procesar la solicitud. Formato JSON. No se incluye en todas las solicitudes (requieren enviar información como: POST y PUT).
+
+> HTTPS
+
+Le agrega una capa extra de seguridad.
+
+> Método (Method) HTTP
+
+Verbo ("verbos HTTP") o solicitud que indica la intención de la solicitud.
+
+- GET (para Solicitar un recurso específico).
+- POST (Para Crear un recurso específico. Agregar ususarios nuevos a una base de datos).
+- PUT (Para Modificar un recurso específico. Hacer un cambio en una base de datos.)
+- DELETE (Para Eliminar un recurso específico).
+
+> Respuesta (Response) HTTP
+
+- Código de estado (200, 404...etc).
+- Texto de Estado.
+- Texto de Estado.
+- Cabeceras (Headers).
+- Cuerpo (Body).
+
+> Código de Estado HTTP
+
+[HTTP_State](https://developer.mozilla.org/es/docs/Web/HTTP/Status)
+
+> Números que indican si se han completado exitosamente o no, las solicitudes HTTP.
+
+- Respuestas informativas (100–199),
+- Respuestas satisfactorias (200–299),
+- Redirecciones (300–399),
+- Errores de los clientes (400–499),
+- Errores de los servidores (500–599).
+
+> Más comunes
+
+- 200 OK: La respuesta fue exitosa.
+- 400 Bad Request: El servidor no pudo interpretar la solicitud.
+- 404 Not Found: El mservidor no pudo encontrar el recurso solicitado.
+- 500 Internal Server Error: El servidor encontró una situación que no sabe cómo manejar.
+
+[Status](https://camo.githubusercontent.com/0294f63543e7574885567ce08f9cea150b0972e0dbfa682d5e0b07e2423b3e62/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f464452304f4d6d57514141486364573f666f726d61743d6a7067266e616d653d343039367834303936)
+
 ## MIT LICENSE
 
 MIT License
