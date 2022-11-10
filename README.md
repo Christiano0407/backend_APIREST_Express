@@ -197,6 +197,8 @@ Verbo ("verbos HTTP") o solicitud que indica la intención de la solicitud.
 - PUT (Para Modificar un recurso específico. Hacer un cambio en una base de datos.)
 - DELETE (Para Eliminar un recurso específico).
 
+![](https://static.platzi.com/media/user_upload/REST-65e4240f-662b-406e-91c9-57d8b0dd56f4.jpg)
+
 > Respuesta (Response) HTTP
 
 - Código de estado (200, 404...etc).
@@ -253,6 +255,10 @@ Normalmente usamos el formato "JSON".
 > API Tool (Rapid API)
 
 [Rapid_api](https://rapidapi.com/hub)
+
+> Endpoints
+
+Los endpoints son las URLs de un API o un backend que responden a una petición. Los mismos entrypoints tienen que calzar con un endpoint para existir. Algo debe responder para que se renderice un sitio con sentido para el visitante.
 
 ## MIT LICENSE
 
