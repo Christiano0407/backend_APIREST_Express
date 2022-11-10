@@ -130,6 +130,14 @@ La API Fetch proporciona una interfaz para recuperar recursos (incluso a través
 
 [MDN_Fetch](https://developer.mozilla.org/es/docs/Web/API/Fetch_API)
 
+> REST
+
+Representational State Transfer. Estilo de arquitectura de software para sistemas hepermedia distribuidos como la "World Wide Web".
+
+> API & REST (RESTful API)
+
+RESTFul API: Es una "API", basada en "REST".
+
 > Web Article
 
 [APIRESTful](https://aldeahost.com.mx/todo-lo-que-necesitas-saber-sobre-el-web-service/)
@@ -217,6 +225,34 @@ Verbo ("verbos HTTP") o solicitud que indica la intención de la solicitud.
 - 500 Internal Server Error: El servidor encontró una situación que no sabe cómo manejar.
 
 ![Status](https://camo.githubusercontent.com/0294f63543e7574885567ce08f9cea150b0972e0dbfa682d5e0b07e2423b3e62/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f464452304f4d6d57514141486364573f666f726d61743d6a7067266e616d653d343039367834303936)
+
+> Características / Characters
+
+- Routing
+- Enfócate en alto rendimiento
+- Nos permite desarrollar aplicaciones de Node.js más rápidamente con código conciso.
+
+> CRUD (Create, Read, Update, Delete)
+
+(Crear, Leer, Actualizar, Eliminar) Operaciones básicas que se pueden realizar con la información almacenada.
+
+> CRUD & HTTP
+
+CRUD & HTTP (Method) => Create == POST, Read == GET, Update == PUT, Delete == DELETE.
+
+> CRUD & API (Application Programming Interface)
+
+API: Interfaz de Programación de aplicaciones. Permite que dos o más programas se comuniquen entre si.
+
+Nos permite que un software ofrezca un servicio a otro software.
+
+La "API", no son usadas directamente por el usuario sino por el programador que usa la "API", para implementar su programa.
+
+Normalmente usamos el formato "JSON".
+
+> API Tool (Rapid API)
+
+[Rapid_api](https://rapidapi.com/hub)
 
 ## MIT LICENSE
 
