@@ -9,5 +9,5 @@ app.get('/', (req, res) => {
 });
 //*? === Listen Port === */
 app.listen(port, () => {
-  console.log(`Server is running in Port http://localhost:${PORT}...`);
+  console.log(`Server is running in Port http://localhost:${port}...`);
 });
