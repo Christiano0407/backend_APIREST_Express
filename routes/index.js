@@ -1,5 +1,5 @@
 //** === ==> Call Router <== === */
-const { router } = require(`./routes/productsRoute`);
+const router = require('./productsRoute.js');
 // const routerUser = require(`./`);
 
 //*! === Define Route Default === */
