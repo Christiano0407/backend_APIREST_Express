@@ -270,7 +270,7 @@ Normalmente usamos el formato "JSON".
 
 Los endpoints son las URLs de un API o un backend que responden a una petición. Los mismos entrypoints tienen que calzar con un endpoint para existir. Algo debe responder para que se renderice un sitio con sentido para el visitante.
 
-> Params (Parámetros) ==> ":" / "?" / "&"
+> Params (Parámetros) ==> ":"
 
 ```javascript
 
@@ -298,11 +298,14 @@ app.get('/categories/:categoriesId/products/:productsId', (req, res) => {
 
 ```
 
-> Query Parameters (GET:parámetros query) => Filtrar
+> Query Parameters (GET:parámetros query) => Filtrar ("?", "size", "limit", "ofset")
 
 Los endpoints especificos deben declararsen antes de los endpoints dinamicos. Uno de los mandamientos.
 
 ```javascript
+/*
+"?", "size", "limit", "ofset"
+*/
 
 // api.example.com/products
 // api.example.com/products?page=1
@@ -327,6 +330,16 @@ app.get("/users", (req, res) => {
   res.send("Sorry! Not exist params");
  }
 });
+```
+
+> Todo lo que sea "específico", debe de ir antes de lo que es "dinámico".
+
+```javascript
+
+//app.get('/products/filter', (req, res) =>
+
+//app.get('/products/:id', (req, res) => {};
+
 ```
 
 ## MIT LICENSE
