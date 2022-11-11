@@ -1,18 +1,21 @@
 const express = require(`express`);
-
+const { faker } = require(`@faker-js/faker`);
 const routerUser = express.Router();
 
 routerUser.get('/', (req, res) => {
-  const { limit, offset } = req.query;
+  const userNew = [];
+  const { size } = req.query;
+  const limit = size || 15;
 
-  if (limit && offset) {
-    res.json({
-      limit,
-      offset,
+  for (let i = 0; i < limit; i++) {
+    userNew.push({
+      username: faker.fake('{{name.lastName}}'),
+      userId: faker.datatype.uuid(),
+      email: faker.internet.email(),
     });
-  } else {
-    res.send('Sorry! Not exist params');
   }
+
+  res.json(userNew);
 });
 
 //** === >>> Export <<< === */
