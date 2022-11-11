@@ -48,6 +48,19 @@ app.get('/categories/:categoriesId/products/:productsId', (req, res) => {
   });
 });
 
+app.get('/users', (req, res) => {
+  const { limit, offset } = req.query;
+
+  if (limit && offset) {
+    res.json({
+      limit,
+      offset,
+    });
+  } else {
+    res.send('Sorry! Not exist params');
+  }
+});
+
 //*? === Listen Port === */
 app.listen(port, () => {
   console.log(`Server is running in Port http://localhost:${port}...`);

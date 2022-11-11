@@ -312,6 +312,23 @@ Los endpoints especificos deben declararsen antes de los endpoints dinamicos. Un
 
 ```
 
+```javascript
+// === Query Params
+
+app.get("/users", (req, res) => {
+ const { limit, offset } = req.query;
+
+ if(limit && offset) {
+  res.json({
+    limit,
+    offset
+  });
+ } else {
+  res.send("Sorry! Not exist params");
+ }
+});
+```
+
 ## MIT LICENSE
 
 MIT License
