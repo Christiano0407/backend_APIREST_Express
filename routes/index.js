@@ -1,4 +1,5 @@
-//** === ==> Call Router <== === */
+//** === === === ==> Call & Assemble Routers <== === === === */
+
 const router = require('./productsRoute.js');
 const routerCategories = require(`./categoriesRoute.js`);
 const routerUser = require(`./usersRoutes.js`);
