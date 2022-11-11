@@ -5,15 +5,15 @@ const routerUser = require(`./usersRoutes.js`);
 
 //*! === Define Route Default === */
 function routeProductApi(app) {
-  app.use('/products', router);
+  app.use('/api/products', router);
 }
 
 function routeCategoriesApi(app) {
-  app.use(`/categories`, routerCategories);
+  app.use(`/api/categories`, routerCategories);
 }
 
 function routerUserApi(app) {
-  app.use(`/users`, routerUser);
+  app.use(`/api/users`, routerUser);
 }
 
 module.exports = { routeProductApi, routeCategoriesApi, routerUserApi };
