@@ -1,35 +1,27 @@
 //** === ==> Rout Products <== === */
 const express = require(`express`);
 const { faker } = require(`@faker-js/faker`);
-
+//*!=== Services */
+const ProductServices = require(`../services/productsService.js`);
+const { product } = require('prelude-ls');
+//*!=== Router & Services === */
 const router = express.Router();
+const service = new ProductServices();
 
 //*! === === ==> */
 router.get('/', (req, res) => {
-  const products = [];
-  const { size } = req.query;
-  const limit = size || 10;
-
-  for (let i = 0; i < limit; i++) {
-    products.push({
-      name: faker.commerce.productName(),
-      price: parseInt(faker.commerce.price(), 10),
-      image: faker.image.imageUrl(),
-    });
-  }
-
+  const products = service.find();
   res.json(products);
 });
 
 //*? === >> GET << ===  */
 router.get('/:id', (req, res) => {
   const { id } = req.params;
+  const products = service.findOne(id);
 
   if (id === `200`) {
     res.status(200).json({
-      id,
-      name: 'Shoes soccer',
-      price: 3500,
+      message: 'Ok!',
     });
   }
 
@@ -50,6 +42,8 @@ router.get('/:id', (req, res) => {
       message: 'Internet Server Error!',
     });
   }
+
+  res.json(products);
 });
 
 //*? === > POST < === */

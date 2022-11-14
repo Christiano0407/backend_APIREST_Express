@@ -462,7 +462,7 @@ router.get('/:id', (req, res) => {
 
 ```
 
-### Server (crea tu primer servicio)
+### Services (crea tu primer servicio)
 
 ```javascript
 
@@ -512,6 +512,28 @@ class ProductsService {
 module.exports = ProductsService;
 
 ```
+
+```javascript
+
+router.get('/', (req, res) => {
+  const products = service.find();
+  res.json(products);
+});
+
+// === List 100 products ===
+
+router.get('/:id', (req, res) => {
+  const { id } = req.params;
+  const products = service.findOne(id);
+  res.json(products);
+});
+
+// ===  http://localhost:3000/api/v1/products/{id}  ===
+```
+
+> Services (The Clean Architecture)
+
+![](https://static.platzi.com/media/user_upload/Captura%20de%20pantalla%202021-10-16%20143805-6c2c25c0-e4fd-4034-b55d-72cf21e3ff75.jpg)
 
 ## MIT LICENSE
 
