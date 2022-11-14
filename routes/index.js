@@ -3,6 +3,11 @@ const express = require(`express`);
 const routerProduction = require('./productsRoute.js');
 const routerCategories = require(`./categoriesRoute.js`);
 const routerUser = require(`./usersRoutes.js`);
+//*? ==> CLI <== */
+//const { app } = require('cli');
+
+//*? ==> Middleware <== */
+//app.use(express.json());
 
 //*! === Define Route Default === */
 function routeProductApi(app) {
