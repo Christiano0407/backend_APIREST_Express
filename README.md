@@ -352,6 +352,58 @@ En el caso de las empresas con entornos de contenedores y multicloud, el middlew
 
 [RedHat](https://www.redhat.com/es/topics/middleware/what-is-middleware)
 
+```javascript
+
+//*? ==> Middleware <== POST Api ===*/
+app.use(express.json());
+
+```
+
+> POST ( API REST )
+
+```javascript
+
+//*? === > POST < ===*/
+router.post(`/`, () => {
+  const body = req.body;
+  res.json({
+    message: 'Created',
+    data: body,
+  });
+});
+
+```
+
+> PATCH (API REST)
+
+```javascript
+
+router.patch('/:id', (req, res) => {
+  const { id } = req.params;
+  const body = req.body;
+  res.json({
+    message: 'update',
+    data: body,
+    id,
+  });
+});
+
+```
+
+> DELETE (API REST)
+
+```javascript
+
+router.delete('/:id', (req, res) => {
+  const { id } = req.params;
+  res.json({
+    message: 'deleted',
+    id,
+  });
+});
+
+```
+
 ## MIT LICENSE
 
 MIT License
