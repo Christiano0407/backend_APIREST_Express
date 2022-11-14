@@ -410,6 +410,58 @@ router.delete('/:id', (req, res) => {
 
 ```
 
+> Status Code
+
+```javascript
+
+//*? === >> GET << ===  */
+
+// ==> GET (String)
+router.get('/:id', (req, res) => {
+  const { id } = req.params;
+
+  if (id === `999`) {
+    res.status(404).json({
+      message: `Sorry! Not Found!`,
+    }) else {
+     res.status(200).json({
+        id,
+        name: 'Shoes soccer',
+        price: 3500,
+      });
+    }
+  }
+});
+
+// === Option Two ===
+  if (id === `200`) {
+    res.status(200).json({
+      id,
+      name: 'Shoes soccer',
+      price: 3500,
+    });
+  }
+
+  if (id === `400`) {
+    res.status(400).json({
+      message: `Bad Request`,
+    });
+  }
+
+  if (id === `404`) {
+    res.status(404).json({
+      message: `Sorry! Not Found!`,
+    });
+  }
+
+  if (id === `500`) {
+    res.status(500).json({
+      message: 'Internet Server Error!',
+    });
+  }
+
+```
+
 ## MIT LICENSE
 
 MIT License

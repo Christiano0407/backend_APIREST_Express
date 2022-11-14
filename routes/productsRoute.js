@@ -21,20 +21,41 @@ router.get('/', (req, res) => {
   res.json(products);
 });
 
+//*? === >> GET << ===  */
 router.get('/:id', (req, res) => {
   const { id } = req.params;
 
-  res.json({
-    id,
-    name: 'Shoes soccer',
-    price: 3500,
-  });
+  if (id === `200`) {
+    res.status(200).json({
+      id,
+      name: 'Shoes soccer',
+      price: 3500,
+    });
+  }
+
+  if (id === `400`) {
+    res.status(400).json({
+      message: `Bad Request`,
+    });
+  }
+
+  if (id === `404`) {
+    res.status(404).json({
+      message: `Sorry! Not Found!`,
+    });
+  }
+
+  if (id === `500`) {
+    res.status(500).json({
+      message: 'Internet Server Error!',
+    });
+  }
 });
 
 //*? === > POST < === */
 router.post(`/`, () => {
   const body = req.body;
-  res.json({
+  res.status(201).json({
     message: 'Created',
     data: body,
   });
