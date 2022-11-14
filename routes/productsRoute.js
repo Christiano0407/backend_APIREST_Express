@@ -1,6 +1,6 @@
 //** === ==> Rout Products <== === */
 const express = require(`express`);
-const { faker } = require(`@faker-js/faker`);
+//const { faker } = require(`@faker-js/faker`);
 //*!=== Services */
 const ProductServices = require(`../services/productsService.js`);
 const { product } = require('prelude-ls');
