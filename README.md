@@ -342,6 +342,16 @@ app.get("/users", (req, res) => {
 
 ```
 
+### ¿Qué es el middleware?
+
+El middleware es el software que brinda servicios y funciones comunes a las aplicaciones, además de lo que ofrece el sistema operativo. Generalmente, se encarga de la gestión de los datos, los servicios de aplicaciones, la mensajería, la autenticación y la gestión de las API.
+
+Ayuda a los desarrolladores a diseñar aplicaciones con mayor eficiencia. Además, actúa como hilo conductor entre las aplicaciones, los datos y los usuarios.
+
+En el caso de las empresas con entornos de contenedores y multicloud, el middleware puede rentabilizar el desarrollo y la ejecución de las aplicaciones según sea necesario.
+
+[RedHat](https://www.redhat.com/es/topics/middleware/what-is-middleware)
+
 ## MIT LICENSE
 
 MIT License

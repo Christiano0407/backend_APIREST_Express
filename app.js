@@ -3,11 +3,7 @@
 const express = require(`express`);
 //const { faker } = require(`@faker-js/faker`);
 //const router = require(`./routes/productsRoute`);
-const {
-  routeProductApi,
-  routeCategoriesApi,
-  routerUserApi,
-} = require('./routes/index.js');
+const routeProductApi = require('./routes/index.js');
 /* const { routeCategoriesApi } = require(`./routes/index.js`);
 const { routerUserApi } = require(`./routes/index.js`);
  */
@@ -16,8 +12,6 @@ const port = process.env.port || 3000;
 
 //*! ==> Call <== */
 routeProductApi(app);
-routeCategoriesApi(app);
-routerUserApi(app);
 
 //*? === Routing === */
 app.get('/', (req, res) => {
