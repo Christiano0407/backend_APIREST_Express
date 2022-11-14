@@ -194,7 +194,7 @@ Proveen información adicional sobre la solicitud.
 
 Contiene la información que debe ser enviada al servidor para procesar la solicitud. Formato JSON. No se incluye en todas las solicitudes (requieren enviar información como: POST y PUT).
 
-> HTTPS
+> HTTPS (Hypertext Transfer Protocol (HTTP))
 
 Le agrega una capa extra de seguridad.
 
@@ -237,6 +237,10 @@ Verbo ("verbos HTTP") o solicitud que indica la intención de la solicitud.
 - 500 Internal Server Error: El servidor encontró una situación que no sabe cómo manejar.
 
 ![Status](https://camo.githubusercontent.com/0294f63543e7574885567ce08f9cea150b0972e0dbfa682d5e0b07e2423b3e62/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f464452304f4d6d57514141486364573f666f726d61743d6a7067266e616d653d343039367834303936)
+
+[HTTP_MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP)
+
+[HTTP_Cat](https://http.cat/)
 
 > Características / Characters
 
@@ -358,6 +362,8 @@ En el caso de las empresas con entornos de contenedores y multicloud, el middlew
 app.use(express.json());
 
 ```
+
+### CRUD (Method)
 
 > POST ( API REST )
 
