@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
 });
 
 //*? === >> GET << ===  */
-router.get('/:id', async (req, res) => {
+router.get('/:id', async (req, res, next) => {
   try {
     const { id } = req.params;
     const products = await service.findOne(id);
@@ -55,6 +55,7 @@ router.get('/:id', async (req, res) => {
     res.status(404).json({
       message: `Sorry, not found!`,
     });
+    next(error);
   }
 });
 
