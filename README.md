@@ -348,18 +348,78 @@ app.get("/users", (req, res) => {
 
 ### ¿Qué es el middleware?
 
+> Se encarga de la gestión de los datos, los servicios de aplicaciones, la mensajería, la autenticación y la gestión de las API.
+> Request >>> Middleware >>> Response
+> Actúa como hilo conductor entre las aplicaciones, los datos y los usuarios.
+
+- Funcionar como pipes ("tuberías. La salida de uno, es la entrada de otro").
+- Validar datos.
+- Capturar errores.
+- Validar permisos.
+- Controlar accesos.
+
 El middleware es el software que brinda servicios y funciones comunes a las aplicaciones, además de lo que ofrece el sistema operativo. Generalmente, se encarga de la gestión de los datos, los servicios de aplicaciones, la mensajería, la autenticación y la gestión de las API.
 
 Ayuda a los desarrolladores a diseñar aplicaciones con mayor eficiencia. Además, actúa como hilo conductor entre las aplicaciones, los datos y los usuarios.
 
 En el caso de las empresas con entornos de contenedores y multicloud, el middleware puede rentabilizar el desarrollo y la ejecución de las aplicaciones según sea necesario.
 
-[RedHat](https://www.redhat.com/es/topics/middleware/what-is-middleware)
+[RedHat_middleware](https://www.redhat.com/es/topics/middleware/what-is-middleware)
+
+> next() => Permite ejecutar e seguir al siguiente Middleware.
+
+```javascript
+
+function(req, res, next) {
+ if(something) {
+   res.send(`end`);
+ } else {
+  next();
+ }
+
+}
+
+```
+
+> error => Niddleware
+
+```javascript
+
+function(error, req, res, next) {
+  if(error) {
+    res.status(500).json({error}); 
+  }else {
+    next();
+  }
+}
+
+```
 
 ```javascript
 
 //*? ==> Middleware <== POST Api ===*/
 app.use(express.json());
+
+```
+
+```javascript
+
+function logErrors (err, req, res, next) {
+  console.log('logErrors');
+  console.error(err);
+  next(err);
+}
+
+function errorHandler(err, req, res, next) {
+  console.log('errorHandler');
+  res.status(500).json({
+    message: err.message,
+    stack: err.stack,
+  });
+}
+
+
+module.exports = { logErrors, errorHandler }
 
 ```
 
