@@ -7,11 +7,17 @@ const routeProductApi = require('./routes/index.js');
 /* const { routeCategoriesApi } = require(`./routes/index.js`);
 const { routerUserApi } = require(`./routes/index.js`);
  */
+//*? === Call Middleware === */
+const { logErrors, errorHandler } = require(`./middleware/errorHandler.js`);
+
+//*? === APP & PORT === */
 const app = express();
 const port = process.env.port || 3000;
 
 //*! ==> Call <== */
 routeProductApi(app);
+app.use(logErrors);
+app.use(errorHandler);
 
 //*? === Routing === */
 app.get('/', (req, res) => {

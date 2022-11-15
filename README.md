@@ -404,12 +404,15 @@ app.use(express.json());
 
 ```javascript
 
+// ==> Logear Errores
+
 function logErrors (err, req, res, next) {
   console.log('logErrors');
   console.error(err);
   next(err);
 }
 
+// ==> Error con "Status"
 function errorHandler(err, req, res, next) {
   console.log('errorHandler');
   res.status(500).json({
