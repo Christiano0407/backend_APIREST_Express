@@ -556,6 +556,56 @@ router.get('/:id', (req, res) => {
 
 ![](https://static.platzi.com/media/user_upload/Captura%20de%20pantalla%202021-10-16%20143805-6c2c25c0-e4fd-4034-b55d-72cf21e3ff75.jpg)
 
+> Async & Await (Services)
+
+```javascript
+
+async create(data) {
+    const newProduct = {
+      id: faker.datatype.uuid(),
+      ...data
+    }
+    this.products.push(newProduct);
+    return newProduct;
+  }
+
+  find() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(this.products);
+      }, 5000);
+    })
+  }
+
+  async findOne(id) {
+    return this.products.find(item => item.id === id);
+  }
+
+  async update(id, changes) {
+    const index = this.products.findIndex(item => item.id === id);
+    if (index === -1) {
+      throw new Error('product not found');
+    }
+    const product = this.products[index];
+    this.products[index] = {
+      ...product,
+      ...changes
+    };
+    return this.products[index];
+  }
+
+  async delete(id) {
+    const index = this.products.findIndex(item => item.id === id);
+    if (index === -1) {
+      throw new Error('product not found');
+    }
+    this.products.splice(index, 1);
+    return { id };
+  }
+
+
+```
+
 ## MIT LICENSE
 
 MIT License
